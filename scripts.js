@@ -11,7 +11,13 @@ let name= 'Johnny';
 let age= '46';
 
 function myLittleFunction() {
-    $('main').append('<p>A p is append in the main.</p>');
+    // condition: number of ps is smaller than 5
+    // <, >, <==, >==, ===, !== you can use this
+    if ($('p').length < 5) {
+        $('main').append('<p>We have a break until 18:06.</p>');
+    } else {
+        console.log('We reached the maximum paragraph number');
+    }
     $('p').css('border', '1px solid red');
     $('p').css('padding', '10px');
 }
@@ -23,6 +29,39 @@ $('#add').click(myLittleFunction);
 $('#remove').click(function () {
     $('p:last-child').remove();
 });
+
+// Fourth part:
+
+// if (condition that can be true or false) {
+    // condition its true
+// } else {
+    // conditions is false
+// }
+
+let colors = ['orange', 'yellow', 'blue', 'lime', 'magenta'];
+
+colors.forEach(function (color) {
+    $('#box-container').append('<div class="box"></div>');
+    $('.box:last-child').css('background', color);
+});
+
+// for (let i = 0; i < 100; i = i + 1) {
+for (let i = 0; i < 100; i++) {
+    // console.log("I'll not cheat on the exam");
+    console.log(i);
+}
+
+
+// $('#box-container').append('<div class="box"></div>');
+// $('.box:last-child').css('background', colors[0]);
+// $('#box-container').append('<div class="box"></div>');
+// $('.box:last-child').css('background', colors[1]);
+// $('#box-container').append('<div class="box"></div>');
+// $('.box:last-child').css('background', colors[2]);
+// $('#box-container').append('<div class="box"></div>');
+// $('.box:last-child').css('background', colors[3]);
+// $('#box-container').append('<div class="box"></div>');
+// $('.box:last-child').css('background', colors[4]);
 
 console.log('Script file is loaded');
 
