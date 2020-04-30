@@ -2,13 +2,27 @@
 
 // $('css selector').action()
 $('h1').html('This is done by <em>JavaScripts</em>');
-$('p').css('border', '1px solid red');
-$('p').css('padding', '10px');
 // ez bekapcsolja
 $('h2').toggleClass('blue');
 // ez kikapcsolja
 $('h2').toggleClass('blue');
 
+let name= 'Johnny';
+let age= '46';
+
+function myLittleFunction() {
+    $('main').append('<p>A p is append in the main.</p>');
+    $('p').css('border', '1px solid red');
+    $('p').css('padding', '10px');
+}
+
+myLittleFunction();
+myLittleFunction();
+
+$('#add').click(myLittleFunction);
+$('#remove').click(function () {
+    $('p:last-child').remove();
+});
 
 console.log('Script file is loaded');
 
